@@ -18,5 +18,6 @@ bulb3.addEventListener("click", toggleBulb);
 function toggleBulb() {
     this.classList.toggle("active");
     count++;
-    counter.innerHTML = `You've clicked the lights ${count} times`;
+    if (count == 1) counter.innerHTML = `You've clicked the lights ${count} time`; // Singular grammar
+    else counter.innerHTML = `You've clicked the lights ${count} times`;
 }
