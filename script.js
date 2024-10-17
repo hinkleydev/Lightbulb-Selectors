@@ -1,16 +1,22 @@
 // Write your code here
+let bulb1, bulb2, bulb3, counter, count;
+
+bulb1 = document.querySelector("#lightbulb1");
+bulb2 = document.querySelector("#lightbulb2");
+bulb3 = document.querySelector("#lightbulb3");
+counter = document.querySelector(".subtitle");
+count = 0;
+
+bulb1.addEventListener("click", toggleBulb);
+bulb2.addEventListener("click", toggleBulb);
+bulb3.addEventListener("click", toggleBulb);
+
 /** Toggles the 'active' class on an element
  * 
  *  @this {HTMLDivElement}
  */
 function toggleBulb() {
     this.classList.toggle("active");
+    count++;
+    counter.innerHTML = `You've clicked the lights ${count} times`;
 }
-
-let bulb1, bulb2, bulb3;
-bulb1 = document.querySelector("#lightbulb1");
-bulb2 = document.querySelector("#lightbulb2");
-bulb3 = document.querySelector("#lightbulb3");
-bulb1.addEventListener("click", toggleBulb);
-bulb2.addEventListener("click", toggleBulb);
-bulb3.addEventListener("click", toggleBulb);
