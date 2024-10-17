@@ -1,15 +1,13 @@
 // Write your code here
-let bulb1, bulb2, bulb3, counter, count;
+let bulbs, counter, count;
 
-bulb1 = document.querySelector("#lightbulb1");
-bulb2 = document.querySelector("#lightbulb2");
-bulb3 = document.querySelector("#lightbulb3");
+bulbs = document.querySelectorAll(".lightbulb");
 counter = document.querySelector(".subtitle");
 count = 0;
 
-bulb1.addEventListener("click", toggleBulb);
-bulb2.addEventListener("click", toggleBulb);
-bulb3.addEventListener("click", toggleBulb);
+for (let i = 0; i < bulbs.length; i++) {
+    bulbs[i].addEventListener("click", toggleBulb);
+}
 
 /** Toggles the 'active' class on an element
  * 
